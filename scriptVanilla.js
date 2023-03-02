@@ -4,7 +4,7 @@ const val = document.getElementById("val");
 
 let increment = 1;
 
-let resArr = [];
+let resArr = [0];
 
 function add_more_field() {
   increment += 1;
@@ -36,21 +36,26 @@ function add_more_field() {
   flex.appendChild(removebtn);
 
   arrI.length = 0;
-  
+
   id_Val = document.getElementById(price.id);
   id_Val.addEventListener("keyup", (view) => {
     let x = document.getElementById(price.id);
     console.log(x.value);
-    
-    resArr.push(x.toString());
-    let position = resArr[_id]
-    console.log(position);
-    if (position!=x.toString()){
-      position=x.value.toString()
-      console.log("new array");
-      console.log(resArr);
-    }
+
+    resArr[0] = x.value.toString();
+    console.log(resArr);
   });
+
+  while (_id < increment-1) {       //In progress
+    var array = new Array(_id);
+    id_Val.addEventListener("keyup", (view) => {
+      let x = document.getElementById(price.id);
+      console.log(x.value);
+
+      array[0] = x.value.toString();
+      console.log(array);
+    });
+  }       
 }
 addbtn.addEventListener("click", add_more_field);
 

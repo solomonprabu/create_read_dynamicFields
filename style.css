@@ -1,0 +1,36 @@
+.body{
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-direction: column;
+    height: 100vh;
+    background-attachment: fixed;
+}
+.container{
+    width: auto;
+    height: 80vh;
+    background-image: linear-gradient(green,black);
+    align-items: center;
+    color: white;
+    padding: 10px;
+}
+.inputfield{
+    width:20%;
+}
+.add{
+    background-color: black;
+    color: aliceblue;
+    margin: 5px;
+    padding: 3px;
+    border: none;
+    width: 12%;
+    border-radius: 5px;
+    
+}
+#val{
+    width: 10%;
+    justify-content: end;
+    position:fixed;
+    border-radius: 5px;
+    box-shadow: none;
+}

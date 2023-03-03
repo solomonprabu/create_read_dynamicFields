@@ -4,11 +4,14 @@ const val = document.getElementById("val");
 
 let increment = 1;
 
-let resArr = [0];
+let resArr = [];
+let tempArr = [];
 
 function add_more_field() {
   increment += 1;
-  console.log("increment" + increment);
+  var index = increment-1;
+  resArr[index] = [];
+  // console.log("increment" + increment);
 
   arrI = [];
 
@@ -41,21 +44,11 @@ function add_more_field() {
   id_Val.addEventListener("keyup", (view) => {
     let x = document.getElementById(price.id);
     console.log(x.value);
-
-    resArr[0] = x.value.toString();
+    resArr[index][0] = x.value.toString();
+    // tempArr[0] = x.value.toString();
+    // console.log(tempArr);
     console.log(resArr);
   });
-
-  while (_id < increment-1) {       //In progress
-    var array = new Array(_id);
-    id_Val.addEventListener("keyup", (view) => {
-      let x = document.getElementById(price.id);
-      console.log(x.value);
-
-      array[0] = x.value.toString();
-      console.log(array);
-    });
-  }       
 }
 addbtn.addEventListener("click", add_more_field);
 
@@ -68,5 +61,8 @@ val.addEventListener("keyup", show);
 
 function show() {
   let x = document.getElementById("val");
+  resArr[0]=[];
+  resArr[0][0] = x.value;
+  console.log(resArr);
   console.log(x.value);
 }
